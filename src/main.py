@@ -3,7 +3,7 @@ import os
 import PySimpleGUI as sg
 
 from ui import UI
-from utils import Utils, Notifier
+from utils import Utils, Notifier, check_saved_games
 
 
 def main():
@@ -37,7 +37,7 @@ def main():
 
         if menu_event == '-SAVEDGAMESDIR-':
             saved_games_dir = menu_values['-SAVEDGAMESDIR-']
-            if os.path.exists(saved_games_dir) and saved_games_dir.endswith('Saved Games'):
+            if os.path.exists(saved_games_dir) and check_saved_games(saved_games_dir):
                 utils.saved_games_dir = saved_games_dir
             else:
                 notifications.add('SavedGames directory not found.')

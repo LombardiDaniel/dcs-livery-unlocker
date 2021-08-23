@@ -1,5 +1,12 @@
 import os
 
+def check_saved_games(saved_games_dir):
+    for folder_name in os.listdir(saved_games_dir):
+        if folder_name in ('DCS', 'DCS.openbeta'):
+            return True
+            
+    return False
+
 class Utils:
     def __init__(self):
         self.dcs_dir = ''
