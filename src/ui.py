@@ -18,9 +18,6 @@ layout = [
     [
         sg.Button("UNLOCK LIVERIES", enable_events=True, key="-START-", visible=True),
     ],
-    # [
-    #     sg.Text("", size=(52, 1), key="-UPDATES-", visible=False)
-    # ]
 ]
 
 
@@ -29,4 +26,4 @@ class UI:
     sg.theme('Dark Teal 4')
 
     def __init__(self):
-        self.window = sg.Window('DCS Liveries Nation Unlocker', layout)
+        self.window = sg.Window('DCS Liveries Nation Unlocker - v1.0', layout, icon='logo.ico')
