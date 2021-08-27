@@ -36,11 +36,13 @@ def main():
                 notifications.add('DCS directory not found.')
 
         if menu_event == '-SAVEDGAMESDIR-':
-            saved_games_dir = menu_values['-SAVEDGAMESDIR-']
-            if os.path.exists(saved_games_dir) and check_saved_games(saved_games_dir):
-                utils.saved_games_dir = saved_games_dir
+            saved_games_dcs_dir = menu_values['-SAVEDGAMESDIR-']
+            if os.path.exists(saved_games_dcs_dir) and (
+                saved_games_dcs_dir.endswith('DCS') or saved_games_dcs_dir.endswith('DCS.openbeta')
+            ):
+                utils.saved_games_dcs_dir = saved_games_dcs_dir
             else:
-                notifications.add('SavedGames directory not found.')
+                notifications.add('SavedGames/DCS directory not found.')
 
         if menu_event == '-START-':
             if utils.ready():
@@ -48,14 +50,12 @@ def main():
                 ui.window['-START-'].update(disabled=True)
                 notifications.add('Working on it... ')
 
-                print(utils.saved_games_dir, utils.dcs_dir)
+                print(utils.saved_games_dcs_dir, utils.dcs_dir)
 
                 try:
                     utils.fix_default_liveries()
-                    utils.fix_mods_liveries(openbeta=False)
-                    utils.fix_mods_liveries(openbeta=True)
-                    utils.fix_downloaded_liveries(openbeta=False)
-                    utils.fix_downloaded_liveries(openbeta=True)
+                    utils.fix_mods_liveries()
+                    utils.fix_downloaded_liveries()
 
                     notifications.add('Done! You may close the program.')
                     ui.window['-START-'].update(disabled=False)

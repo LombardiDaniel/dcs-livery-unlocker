@@ -6,12 +6,12 @@ layout = [
         sg.Text("", size=(52, 1), key="-NOTIFICATIONS-", visible=False)
     ],
     [
-        sg.Text('DCS Install Folder   '),
+        sg.Text('DCS Install Folder           '),
         sg.In(size=(30, 1), enable_events=True, key="-DCSDIR-"),
         sg.FolderBrowse()
     ],
     [
-        sg.Text('SavedGames Folder'),
+        sg.Text('SavedGames/DCS Folder'),
         sg.In(size=(30, 1), enable_events=True, key="-SAVEDGAMESDIR-"),
         sg.FolderBrowse()
     ],

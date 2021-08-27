@@ -1,20 +1,20 @@
 import os
 
-def check_saved_games(saved_games_dir):
-    for folder_name in os.listdir(saved_games_dir):
+def check_saved_games(saved_games_dcs_dir):
+    for folder_name in os.listdir(saved_games_dcs_dir):
         if folder_name in ('DCS', 'DCS.openbeta'):
             return True
-            
+
     return False
 
 class Utils:
     def __init__(self):
         self.dcs_dir = ''
-        self.saved_games_dir = ''
+        self.saved_games_dcs_dir = ''
         # self.window = ui_window
 
     def ready(self):
-        return self.dcs_dir != '' and self.saved_games_dir != ''
+        return self.dcs_dir != '' and self.saved_games_dcs_dir != ''
 
     def fix_default_liveries(self):
 
@@ -41,18 +41,16 @@ class Utils:
 
                                     for i, line in enumerate(lines):
                                         if 'countries = {' in line:
-                                            print('BINGO')
+                                            print(f'Unlocking: {description_lua_path}')
                                             lines[i] = line.replace('countries = {', '-- countries = {')
 
                                     with open(description_lua_path, 'w', encoding='utf-8') as f:
                                         f.writelines(lines)
 
 
-    def fix_mods_liveries(self, openbeta):
+    def fix_mods_liveries(self):
 
-        dcs_folder_name = 'DCS.openbeta' if openbeta else 'DCS'
-
-        aircrafts_dir = os.path.join(self.saved_games_dir, dcs_folder_name, 'mods', 'aircraft')
+        aircrafts_dir = os.path.join(self.saved_games_dcs_dir, 'mods', 'aircraft')
 
         if os.path.isdir(aircrafts_dir):
             for aircraft_name in os.listdir(aircrafts_dir):
@@ -76,17 +74,15 @@ class Utils:
 
                                         for i, line in enumerate(lines):
                                             if 'countries = {' in line:
-                                                print('BINGO')
+                                                print(f'Unlocking: {description_lua_path}')
                                                 lines[i] = line.replace('countries = {', '-- countries = {')
 
                                         with open(description_lua_path, 'w') as f:
                                             f.writelines(lines)
 
-    def fix_downloaded_liveries(self, openbeta):
+    def fix_downloaded_liveries(self):
 
-        dcs_folder_name = 'DCS.openbeta' if openbeta else 'DCS'
-
-        liveries_dir = os.path.join(self.saved_games_dir, dcs_folder_name, 'Liveries')
+        liveries_dir = os.path.join(self.saved_games_dcs_dir, 'Liveries')
 
         if os.path.isdir(liveries_dir):
             for aircraft_name in os.listdir(liveries_dir):
@@ -107,7 +103,7 @@ class Utils:
 
                                     for i, line in enumerate(lines):
                                         if 'countries = {' in line and '--' not in line:
-                                            print('BINGO')
+                                            print(f'Unlocking: {description_lua_path}')
                                             lines[i] = line.replace('countries = {', '-- countries = {')
                                             print(lines[i])
 
