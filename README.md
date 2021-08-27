@@ -13,11 +13,11 @@ Simple script to unlock all skins from all nations in DCS: World.
 
 ### Download
 
-You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles:  https://www.digitalcombatsimulator.com/en/files/3318142/
+You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: [LINK WILL BE UPDATED WHEN AVAILABLE]
 
 ### Usage
 
-Just point the app to your `DCS install folder` and to the `Saved Games` folder on your computer. Note: do NOT point it to `Saved Games/DCS` or `Saved Games/DCS.openbeta`, the script will find those automatically.
+Just point the app to your `DCS install folder` and to the `Saved Games/DCS` folder on your computer. Note: do NOT point it to `Saved Games`, point it to `Saved Games/DCS.openbeta` or `Saved Games/DCS.openbeta`. (Changed from previous versions)
 
 ## License
 
