@@ -28,9 +28,7 @@ def main():
 
         if menu_event == '-DCSDIR-':
             dcs_dir = menu_values['-DCSDIR-']
-            if os.path.exists(dcs_dir) and (
-                dcs_dir.endswith('DCS World') or dcs_dir.endswith('DCS World OpenBeta')
-            ):
+            if os.path.exists(dcs_dir) and 'DCS' in dcs_dir:
                 utils.dcs_dir = dcs_dir
             else:
                 notifications.add('DCS directory not found.')
