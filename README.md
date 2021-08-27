@@ -13,7 +13,7 @@ Simple script to unlock all skins from all nations in DCS: World.
 
 ### Download
 
-You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: [LINK WILL BE UPDATED WHEN AVAILABLE]
+You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: [https://www.digitalcombatsimulator.com/en/files/3318175/]
 
 ### Usage
 
