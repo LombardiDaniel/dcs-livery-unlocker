@@ -1,3 +1,5 @@
+[![tag](https://img.shields.io/github/v/release/LombardiDaniel/dcs-livery-unlocker?include_prereleases&style=for-the-badge)](https://github.com/LombardiDaniel/Reddbot/releases)
+
 # DCS Livery Unlocker
 Simple script to unlock all skins from all nations in DCS: World.
 
@@ -13,7 +15,7 @@ Simple script to unlock all skins from all nations in DCS: World.
 
 ### Download
 
-You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: [https://www.digitalcombatsimulator.com/en/files/3318175/]
+You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: [LINK PENDING]
 
 ### Usage
 
