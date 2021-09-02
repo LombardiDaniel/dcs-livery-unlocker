@@ -28,7 +28,7 @@ This project is under the MIT license - see the file [LICENSE.md](LICENSE.md) fo
 * Hat tip to anyone whose code was used
 * Thanks to [Atom](https://atom.io/) for being an awesome text editor
 
-Create executable (from src folder):
+Create executable (from `src` folder):
 ```sh
 pyinstaller --onefile --icon=logo.ico main.py
 ```

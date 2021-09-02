@@ -80,6 +80,34 @@ class Utils:
                                         with open(description_lua_path, 'w') as f:
                                             f.writelines(lines)
 
+    def fix_bazar_liveries(self):
+
+        aircrafts_dir = os.path.join(self.dcs_dir, 'Bazar', 'liveries')
+
+        for aircraft_name in os.listdir(aircrafts_dir):
+            if not aircraft_name.endswith('Pack'):
+                aircraft_liveries_dir = os.path.join(aircrafts_dir, aircraft_name)
+
+                for livery_name in os.listdir(aircraft_liveries_dir):
+                    livery_dir = os.path.join(aircraft_liveries_dir, livery_name)
+
+                    description_lua_path = os.path.join(livery_dir, 'description.lua')
+                    if os.path.isfile(description_lua_path):
+                        lines = []
+
+                        print(description_lua_path)
+
+                        with open(description_lua_path, 'r', encoding='utf-8') as f:
+                            lines = f.readlines()
+
+                        for i, line in enumerate(lines):
+                            if 'countries = {' in line:
+                                print(f'Unlocking: {description_lua_path}')
+                                lines[i] = line.replace('countries = {', '-- countries = {')
+
+                        with open(description_lua_path, 'w', encoding='utf-8') as f:
+                            f.writelines(lines)
+
     def fix_downloaded_liveries(self):
 
         liveries_dir = os.path.join(self.saved_games_dcs_dir, 'Liveries')

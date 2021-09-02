@@ -46,7 +46,6 @@ def main():
             if utils.ready():
                 notifications.clear()
                 ui.window['-START-'].update(disabled=True)
-                notifications.add('Working on it... ')
 
                 print(utils.saved_games_dcs_dir, utils.dcs_dir)
 
@@ -54,11 +53,12 @@ def main():
                     utils.fix_default_liveries()
                     utils.fix_mods_liveries()
                     utils.fix_downloaded_liveries()
+                    utils.fix_bazar_liveries()
 
                     notifications.add('Done! You may close the program.')
                     ui.window['-START-'].update(disabled=False)
                 except Exception as e:
-                    notifications.add('Something went wrong.')
+                    notifications.add('Something went wrong. Check log file.')
                     with open('dcs_nation_skin_unlocker.log', 'a+') as f:
                         f.write(e, encoding='utf-8')
 
