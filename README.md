@@ -19,7 +19,7 @@ You can get the latest executable from [releases](https://github.com/LombardiDan
 
 ### Usage
 
-Just point the app to your `DCS install folder` and to the `Saved Games/DCS` folder on your computer. Note: do NOT point it to `Saved Games`, point it to `Saved Games/DCS.openbeta` or `Saved Games/DCS.openbeta`. (Changed from previous versions)
+Just point the app to your `DCS install folder` and to the `Saved Games/DCS` folder on your computer. Note: do NOT point it to `Saved Games`, point it to `Saved Games/DCS.openbeta` or `Saved Games/DCS`. (Changed from previous versions)
 
 ## License
 
