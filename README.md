@@ -27,7 +27,7 @@ Changelog:
 - `1.0`: Initial Release.
 - `1.1`: Changed how the script reads files (some people had errors on SavedGames).
 - `1.2`: Helicopters and every other vehicle in the game (including ground vehicles).
-- `1.2.1`: Internal build is different, uses glob package (simpler code), also fixed a bug where some skins (due to lua file structure) would be ignored.
+- `1.2.1`: Internal build is different, uses [glob](https://docs.python.org/3/library/glob.html) package (simpler code), also fixed a bug where some skins (due to lua file structure) would be ignored.
 
 ## License
 
