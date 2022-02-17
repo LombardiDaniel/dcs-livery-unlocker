@@ -15,7 +15,7 @@ Simple script to unlock all skins from all nations in DCS: World.
 
 ### Download
 
-You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: [https://www.digitalcombatsimulator.com/en/files/3318254/]
+You can get the latest executable from [releases](https://github.com/LombardiDaniel/dcs-livery-unlocker/releases). Or from the UserFiles: https://www.digitalcombatsimulator.com/en/files/3318254/
 
 ### Usage
 
@@ -32,5 +32,5 @@ This project is under the MIT license - see the file [LICENSE.md](LICENSE.md) fo
 
 Create executable (from `src` folder):
 ```sh
-pyinstaller --onefile --icon=logo.ico main.py
+pyinstaller --clean --onefile --icon='logo.ico' main.py
 ```

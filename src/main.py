@@ -8,7 +8,7 @@ from utils import Utils, Notifier, check_saved_games
 
 def main():
 
-    DEBUG = True
+    DEBUG = False
 
     ui = UI()
     utils = Utils()
@@ -51,7 +51,7 @@ def main():
 
                 try:
                     utils.fix_default_liveries()
-                    utils.fix_mods_liveries()
+                    # utils.fix_mods_liveries() # this one is commented because each mod does it their own way
                     utils.fix_downloaded_liveries()
                     utils.fix_bazar_liveries()
 
