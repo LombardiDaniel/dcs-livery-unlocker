@@ -8,6 +8,7 @@ Simple script to unlock all skins from all nations in DCS: World.
 -   [Download and Usage](#download-and-usage)
     -   [Download](#download)
     -   [Usage](#Usage)
+-   [Changelog](#changelog)
 -   [License](#license)
 -   [Acknowledgments](#acknowledgments)
 
@@ -20,6 +21,13 @@ You can get the latest executable from [releases](https://github.com/LombardiDan
 ### Usage
 
 Just point the app to your `DCS install folder` and to the `Saved Games/DCS` folder on your computer. Note: do NOT point it to `Saved Games`, point it to `Saved Games/DCS.openbeta` or `Saved Games/DCS`. (Changed from previous versions)
+
+## Changelog
+Changelog:
+- `1.0`: Initial Release.
+- `1.1`: Changed how the script reads files (some people had errors on SavedGames).
+- `1.2`: Helicopters and every other vehicle in the game (including ground vehicles).
+- `1.2.1`: Internal build is different, uses glob package (simpler code), also fixed a bug where some skins (due to lua file structure) would be ignored.
 
 ## License
 
